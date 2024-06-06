@@ -86,7 +86,8 @@ def neural_network(inputs, weights):
 
 # Let's start with writing a scalar function scalar_function, which will apply the following 
 # operation with input x and y.
-# f(x, y) = {x * y if x <= y else x / y}
+# f(x, y) = {"""x * y (if x <= y)
+#               else x / y"""}
 # Note that x and y are scalars.
 
 def scalar_function(x, y):
