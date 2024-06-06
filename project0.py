@@ -35,3 +35,50 @@ def operations(h, w):
     
     return A, B, s
 
+
+# Write a function called norm that takes as input two Numpy column arrays A and B, 
+# adds them, and returns s, the L2 norm of their sum.
+
+def norm(A, B):
+    """
+    Takes two Numpy column arrays, A and B, and returns the L2 norm of their
+    sum.
+
+    Arg:
+      A - a Numpy array
+      B - a Numpy array
+    Returns:
+      s - the L2 norm of A+B.
+    """
+    #Your code here
+    c = A + B
+    s = np.linalg.norm(c)
+    
+    return s
+
+
+# Here, we will write a function neural_network, which will apply a neural network 
+# operation with 2 inputs and 1 output and a given weight matrix.
+# Your function should take two arguments: inputs and weights, two NumPy arrays of shape  
+# (2, 1) and should return a NumPy array of shape (1, 1), the output of the neural network. 
+# Do not forget the tanh activation.
+
+def neural_network(inputs, weights):
+    """
+     Takes an input vector and runs it through a 1-layer neural network
+     with a given weight matrix and returns the output.
+
+     Arg:
+       inputs - 2 x 1 NumPy array
+       weights - 2 x 1 NumPy array
+     Returns (in this order):
+       out - a 1 x 1 NumPy array, representing the output of the neural network
+    """
+    #Your code here
+    inputs = np.array(inputs)
+    weights = np.array(weights)
+
+    z = np.dot(inputs.T, weights)
+    output = np.tanh(z)
+    
+    return output
