@@ -96,3 +96,23 @@ def scalar_function(x, y):
     """
     #Your code here
     return x * y if x <= y else x / y
+
+
+print(scalar_function(3, 6))
+
+
+# Please write a vector function vector_function, which will apply the operation f(x, y) defined above 
+# element-wisely with input vectors with same dimension x and y.
+def vector_function(x, y):
+    """
+    Make sure vector_function can deal with vector input x,y
+    """
+    # Your code here
+    def scalar_function(a, b):
+        return a * b if a <= b else a / b
+
+    vectorized_scalar = np.vectorize(scalar_function)
+    return vectorized_scalar(x, y)
+
+
+print(vector_function(5, 9))
