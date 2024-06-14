@@ -1,4 +1,4 @@
-import numpy as np
+import numpy as np # type: ignore
 
 # Write a function called randomization that takes as input a positive integer n, and returns A, a random n x 1 Numpy array.
 def randomization(n):
