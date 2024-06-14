@@ -127,6 +127,7 @@ print(vector_function(5, 9))
 # function should compute each of the metrics for the prediction and sum them. It should also add to this sum three
 # default metrics, in this case, adding 0, 1 or 2 to the prediction.
 
+
 # The initial buggy code:
 def get_sum_metrics(predictions, metrics=[]):
     for i in range(3):
